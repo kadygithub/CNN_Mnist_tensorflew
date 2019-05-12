@@ -114,8 +114,8 @@ def train():
           save_path = saver.save(sess, save_model_path)
           print("Model updated and saved in file: %s" % save_path)
         
-        # test_acc1,test_loss1 = sess.run([accuracy,cost], feed_dict={x: test_X,y : test_y})
-        # print("Epoch:", '%04d,' % (i + 1),"test Accuracy:","{:.5f}".format(test_acc1))
+        test_acc1,test_loss1 = sess.run([accuracy,cost], feed_dict={x: test_X,y : test_y})
+        print("Epoch:", '%04d,' % (i + 1),"test Accuracy:","{:.5f}".format(test_acc1))
         
         # append the loss and accuracy to thier corresponding lists
         train_loss.append(loss)
