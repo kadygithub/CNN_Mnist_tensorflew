@@ -56,7 +56,7 @@ def conv2d(x, W, b, strides,padding):
 def cnn_net(x):
   # Create a dictionery for weight parameters 
   # Each key (e.g., conv1_filter) in the weights dictionary has an argument shape that takes a tuple with 4 values:
-  # The first and seconf are the filter size,  the third is the number of channels in the input image and the last is the number of convolution filters.
+  # The first and second are the filter size,  the third is the number of channels in the input image and the last is the number of convolution filters.
   # The key 'wfc' we flatten the output of last convolutional layer to feed this as input to the fully connected layer. 
   # so, we do the multiplication operation 4*4*64
   weights={
@@ -85,7 +85,7 @@ def cnn_net(x):
   # input [28,28,1] ---> [26,26,32]  
   conv1 = conv2d(x, weights['conv1_filter'], biases['bc1'],1,'VALID')
   conv1_bn = tf.layers.batch_normalization(conv1)
-  input [26,26,32] -----> [24,24,32] 
+  # input [26,26,32] -----> [24,24,32] 
   conv2 = conv2d(conv1_bn, weights['conv2_filter'], biases['bc2'],1,'VALID')
   # add batch normalization
   conv2_bn = tf.layers.batch_normalization(conv2)
