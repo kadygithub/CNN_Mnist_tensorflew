@@ -1,6 +1,26 @@
-# Project Title
+# Implementation of Convolutional Neural Network for MNIST Data Set with Tensorflow
 
-One Paragraph of project description goes here
+In this project, we construct and implement Convolutional Neural Networks in Python with the TensorFlow framework. Multiple techniques, such as dropout, batchnormalization, evaluation of the training-validation loss between epochs.
+
+## Network architecture
+
+Many CNN architectures for classification of Mnist data with high accuracy can be implemented.We choose a model after running several experiments to find the architecture with the most accuracy  and efficiency (less computational complexity). The CNN with 4 convolutional layers and two max-pooling layers (implemented by a convolutional layers) and one fully-connected layer has following architecture:
+
+  
+  - input layer : 784 nodes (MNIST images size)
+  - first convolution layer : 3x3x32
+  - second convolution layer : 3x3x32
+  - first max-pooling layer implemented as a convolutional layer with stride 2: 5x5x64
+  - third convolution layer : 3x3x64
+  - forth convolution layer : 3x3x64
+  - second max-pooling layer implemented as a convolutional layer with stride 2: 5x5x64
+  - first fully-connected layer : 128 nodes
+  - output layer : 10 nodes (number of classes for MNIST data)  
+### Techniques for improving performance and reliabilty
+  1- Batch normalization
+   All convolution/fully-connected layers use batch normalization.
+  2- Dropout
+  After each max-pooling layers and the fully-connected layer dropout technique is added in order to reduce the overfitting of the      model. We run experiment multiple times to determine how much dropout should be considered after each layer. The results shows 40% dropout gives the best results.
 
 ## Getting Started
 
