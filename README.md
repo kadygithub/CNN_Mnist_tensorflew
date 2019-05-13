@@ -17,12 +17,15 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
   - first fully-connected layer : 128 nodes
   - output layer : 10 nodes (number of classes for MNIST data)  
 ### Techniques for improving performance and reliabilty
-  - ### Adding more nonlinearity :
-  by replacing one 5x5 convolution layer with two consecutive 3x3 layers, Furthermore, adding a 5x5 convolution layer with strides=2 instead of max-pooling layer for subsampling that benefit the performance since it is learnable.
-  - ### Batch normalization : 
+  - ### Adding more nonlinearity 
+  By replacing one 5x5 convolution layer with two consecutive 3x3 layers, Furthermore, adding a 5x5 convolution layer with strides=2 instead of max-pooling layer for subsampling that benefit the performance since it is learnable.
+  - ### Batch normalization 
   All convolution/fully-connected layers use batch normalization.
   - ### Dropout 
   After each max-pooling layers and the fully-connected layer dropout technique is added in order to reduce the overfitting of the      model. We run experiment multiple times to determine how much dropout should be considered after each layer. The results shows 40% dropout gives the best results.
+  - ### optimal number of iterations (epochs) 
+  After evaluation of the training-validation loss and accuracy between epochs, we consider epochs=34 to decrease overfitting. 
+  
 
 ## Getting Started
 This project was implemented at Colab Notebooks. It's a Jupyter notebook environment that requires no setup to use and runs entirely in the cloud. We can upload the notebook to a GitHub repository or download .py files directly.
@@ -52,21 +55,14 @@ for instance: python mnist_cnn_test.py --model-dir model/model1 --batch-size 500
 
 ## Simulation Results
 
-CNN with the same hyper-parameters has been trained 30 times, and gives the following results.
+The CNN network with the unique hyper-parameters has been trained 200 times, and after evaluating the loos and accuracy, the number of epochs has been chosed to be: 34. The reason is that the loss start to increase after 30-35 epochs while accuracy dosn't change considerably.
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/70.png "Dropout :70%")
-dfsfffffffffffffff
+
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40.png "Dropout :40%")
-A single model : 99.61% of accuracy.
-(the model is saved in "model/model01_99.61".)
-Ensemble prediction : 99.72% of accuracy.
-(All 5 models under "model/" are used. I found the collection of 5 models by try and error.)
-99.72% of accuracy is the 5th rank according to Here.
+With 34 iterations and model updates and dropout of 0.7, we get accurcy of 
 
-## Built With
+(the model is saved in "model/".)
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 
 
