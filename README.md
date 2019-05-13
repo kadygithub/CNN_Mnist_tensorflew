@@ -51,7 +51,7 @@ for instance: python mnist_cnn_test.py --model-dir model/model1 --batch-size 500
 ## Simulation Results
 
 CNN with the same hyper-parameters has been trained 30 times, and gives the following results.
-
+![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/40.png "Optional title")
 A single model : 99.61% of accuracy.
 (the model is saved in "model/model01_99.61".)
 Ensemble prediction : 99.72% of accuracy.
