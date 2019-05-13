@@ -22,7 +22,7 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
   2- Dropout
   After each max-pooling layers and the fully-connected layer dropout technique is added in order to reduce the overfitting of the      model. We run experiment multiple times to determine how much dropout should be considered after each layer. The results shows 40% dropout gives the best results.
 
-#### Getting Started
+## Getting Started
 This project was implemented at Colab Notebooks. It's a Jupyter notebook environment that requires no setup to use and runs entirely in the cloud. We can upload the notebook to a GitHub repository or download .py files directly.
  
 
@@ -31,51 +31,32 @@ Link: http://yann.lecun.com/exdb/mnist/
 
 The MNIST database of handwritten digits, available from this page, has a training set of 60,000 examples, and a test set of 10,000 examples. The digits have been size-normalized and centered in a fixed-size image 28by28. Data_Mnist.py download the data to the folder named "data" and then pulls the images into a 4D tensor [image_index, y, x, channels] nad then flatten out the later 3 dimensions [image_index, y*x*channels]:[image_index, 28*28*1]
 
+
+### Train
+
+python train_Mnist_cnn.py
+
+The trained model is saved as "model/model.ckpt".
+
+### Test
+
+python test_Mnist_cnn.py --model-dir <model_directory> --batch-size <batch_size> 
+
+<model_directory> is the location where a model to be testes is saved without specifying filename of "model.ckpt".
+<batch_size> is the number of training examples utilized in one iteration of test data with 10,000 images. 
 ```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+for instance: python mnist_cnn_test.py --model-dir model/model1 --batch-size 5000 
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+## Simulation Results
 
-## Running the tests
+CNN with the same hyper-parameters has been trained 30 times, and gives the following results.
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
+A single model : 99.61% of accuracy.
+(the model is saved in "model/model01_99.61".)
+Ensemble prediction : 99.72% of accuracy.
+(All 5 models under "model/" are used. I found the collection of 5 models by try and error.)
+99.72% of accuracy is the 5th rank according to Here.
 
 ## Built With
 
@@ -83,27 +64,9 @@ Add additional notes about how to deploy this on a live system
 * [Maven](https://maven.apache.org/) - Dependency Management
 * [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ## Acknowledgments
 
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
-
+The implementation has been tested on Google colab :https://colab.research.google.com
+The notbook version of this project in Github : 
