@@ -45,14 +45,24 @@ The trained model is saved as "model/model.ckpt".
 
 ### Test
 
+#### Test for Single model
+
 python test_Mnist_cnn.py --model-dir <model_directory> --batch-size <batch_size> 
 
 <model_directory> is the location where a model to be testes is saved without specifying filename of "model.ckpt".
 <batch_size> is the number of training examples utilized in one iteration of test data with 10,000 images. 
 ```
-for instance: python test_Mnist_cnn.py --model-dir modeltest/model.ckpt --batch-size 5000 
-In colab : !python test_Mnist_cnn.py --model-dir modeltest/model.ckpt --batch-size 5000 
+for instance: python test_Mnist_cnn.py --model-dir model/model1/model.ckpt --batch-size 5000 --is-ensemble False
+In colab : !python test_Mnist_cnn.py --model-dir model/model1/model.ckpt --batch-size 5000 --is-ensemble False
 ```
+#### Test for ensemble model
+The CNN model was trained and evaluated 100 times and the top five models in terms of accuracy were selected and stored in "model" directory. 
+
+```
+for instance: python test_Mnist_cnn.py --model-dir model --batch-size 5000 --is-ensemble True 
+In colab : !python test_Mnist_cnn.py --model-dir model --batch-size 5000 --is-ensemble True
+```
+<model_directory> is the location of directory contaning the sub-directories. Each sub-directories contains a saved model
 
 ## Simulation Results
 
