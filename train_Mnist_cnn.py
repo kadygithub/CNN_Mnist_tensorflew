@@ -31,7 +31,7 @@ import model_cnn
 save_model_path = "model/model.ckpt"
 
 # Hyper parameters for train
-epochs = 200 # number of training itteration
+epochs = 34 # number of training itteration
 TRAIN_BATCH_SIZE = 128 # batch size in traning phase
 keep_probability = 0.7 # dropout percentage
 learning_rate = 0.001  # learning rate
@@ -85,7 +85,7 @@ def train():
     validation_loss=[]
     # max_accuracy variable holds a value of maximum accuracy and update the model if the validation accuracy is greater than it.
     max_accuracy = 0.
-    summary_writer = tf.summary.FileWriter('./Output', sess.graph)
+    
     # Loop over number of epochs
     for i in range(epochs):
         # Loop over number of batchs in each epoch : number of images/batch size
