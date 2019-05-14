@@ -30,7 +30,7 @@ def parser_interface():
     parser.add_argument('--batch-size', type=int,
                         dest='batch_size', help='batch size for test',
                         metavar='TEST_BATCH_SIZE', required=True)
-    parser.add_argument('--use-ensemble',
+    parser.add_argument('--is-ensemble',
                         dest='ensemble', help='boolean for usage of ensemble',
                         metavar='IS_ENSEMBLE', required=True)
     return parser
@@ -127,11 +127,12 @@ def test_ensemble(model_directory_list, batch_size):
             pred = sess.run(y, feed_dict={x: batch_xs, y_: batch_ys})
             # majority voting
             y_final += one_hot_matrix(pred) 
-
+            print(y_final,"y_final..................................................................1")
         correct_prediction = numpy.equal(numpy.argmax(y_final, 1), numpy.argmax(batch_ys, 1))
-
+        print(correct_prediction,"correct prediction..................................................................2, out of loop")
         acc_list.append(numpy.sum(correct_prediction) / batch_size)
-
+        print(acc_list,"sum of correct predictions..................................................................2, out of loop")
+        
     print("Test accuracy for the ensemble models: %g" % numpy.mean(acc_list))
 if __name__ == '__main__':
     # Parse arguments
