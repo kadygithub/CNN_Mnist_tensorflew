@@ -50,7 +50,8 @@ python test_Mnist_cnn.py --model-dir <model_directory> --batch-size <batch_size>
 <model_directory> is the location where a model to be testes is saved without specifying filename of "model.ckpt".
 <batch_size> is the number of training examples utilized in one iteration of test data with 10,000 images. 
 ```
-for instance: python mnist_cnn_test.py --model-dir model/model1 --batch-size 5000 
+for instance: python test_Mnist_cnn.py --model-dir modeltest/model.ckpt --batch-size 5000 
+In colab : !python test_Mnist_cnn.py --model-dir modeltest/model.ckpt --batch-size 5000 
 ```
 
 ## Simulation Results
@@ -59,9 +60,11 @@ The CNN network with the unique hyper-parameters has been trained 200 times, and
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/70.png "Dropout :70%")
 
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40.png "Dropout :40%")
-With 34 iterations and model updates and dropout of 0.7, we get accurcy of 
+With 34 iterations and dropout of 0.7, we get accurcy of 
+- ## 99.61% of accuracy 99.45% .
+ (the model is saved in "model/single_model".)
 
-(the model is saved in "model/".)
+
 
 
 
