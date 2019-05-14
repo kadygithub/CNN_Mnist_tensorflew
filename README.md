@@ -69,4 +69,4 @@ With 34 iterations and model updates and dropout of 0.7, we get accurcy of
 ## Acknowledgments
 
 The implementation has been tested on Google colab :https://colab.research.google.com
-The notbook version of this project in Github : 
+The notbook version of this project in Github: 
