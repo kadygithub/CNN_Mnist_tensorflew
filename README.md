@@ -28,7 +28,7 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
   
 
 ## Getting Started
-This project was implemented at Colab Notebooks. It's a Jupyter notebook environment that requires no setup to use and runs entirely in the cloud. We can upload the notebook to a GitHub repository or download .py files directly.
+This project was implemented at Colab Notebooks. It's a Jupyter notebook environment that requires no setup to use and runs entirely in the cloud. We can upload the notebook to a GitHub repository or download.py files directly.
  
 
 ### MNIST Dataset
