@@ -23,8 +23,8 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
   All convolution/fully-connected layers use batch normalization.
   - ### Dropout 
   After each max-pooling layers and the fully-connected layer dropout technique is added in order to reduce the overfitting of the      model. We run experiment multiple times to determine how much dropout should be considered after each layer. The results shows 40% dropout gives the best results.
-  - ### optimal number of iterations (epochs) 
-  After evaluation of the training-validation loss and accuracy between epochs, we consider epochs=34 to decrease overfitting. 
+  - ### Optimal number of iterations (epochs) 
+  After evaluation of the training-validation loss and accuracy between epochs, we consider epochs=34. 
   
 
 ## Getting Started
