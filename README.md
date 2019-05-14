@@ -62,7 +62,7 @@ The CNN network with the unique hyper-parameters has been trained 200 times, and
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40.png "Dropout :40%")
  
 - ### With 34 iterations and dropout of 0.7, we get accurcy of 99.45% .
-  (the model is saved in #### "model/single_model".)
+  (the model is saved in "model/single_model".)
 
 
 
