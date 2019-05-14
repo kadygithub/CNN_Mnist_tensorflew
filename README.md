@@ -58,8 +58,11 @@ In colab : !python test_Mnist_cnn.py --model-dir modeltest/model.ckpt --batch-si
 
 The CNN network with the unique hyper-parameters has been trained 200 times, and after evaluating the loos and accuracy, the number of epochs has been chosed to be: 34. The reason is that the loss start to increase after 30-35 epochs while accuracy dosn't change considerably.
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/70.png "Dropout :70%")
-
+ #### Randomly 30% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
+ while :
+ 
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40.png "Dropout :40%")
+ #### Randomly 60% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
  
 - ### With 34 iterations and dropout of 0.7, we get accurcy of 99.45% .
   (the model is saved in "model/single_model".)
