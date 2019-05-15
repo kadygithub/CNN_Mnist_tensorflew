@@ -56,7 +56,7 @@ for instance: python test_Mnist_cnn.py --model-dir model/model1/model.ckpt --bat
 In colab : !python test_Mnist_cnn.py --model-dir model/model1/model.ckpt --batch-size 5000 --is-ensemble False
 ```
 #### Test for Ensemble model
-The CNN model was trained and evaluated 100 times and the top five models in terms of accuracy were selected and stored in "model" directory. by running the test_Mnist_cnn.py, these five models are ensembled by majority voting technique.
+The CNN model was trained and evaluated 100 times and the top five models in terms of accuracy were selected and stored in "model" directory. By running the test_Mnist_cnn.py, these five models are ensembled by majority voting technique.
 
 ```
 for instance: python test_Mnist_cnn.py --model-dir model --batch-size 5000 --is-ensemble True 
@@ -74,9 +74,12 @@ The CNN network with the unique hyper-parameters has been trained 200 times, and
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40.png "Dropout :40%")
  #### Randomly 60% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
  
-- ### With 34 iterations and dropout of 0.7, we get accurcy of 99.45% .
+- ### With 34 iterations and 30 % dropout, we get accurcy of 99.45% .
   (the model is saved in "model/single_model".)
-
+ #### ----------------------------------------------------------  Dropout rate : 40% 
+- ###  Accuracy for the ensemble models: 99.19%
+- ###  Accuracy for the ensemble models: 99.49% 
+ (the models are saved in "model/ensemble_models".)
 
 
 
