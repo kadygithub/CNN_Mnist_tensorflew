@@ -1,6 +1,6 @@
 # Implementation of Convolutional Neural Network for MNIST Data Set with Tensorflow
 
-In this project, we construct and implement Convolutional Neural Networks in Python with the TensorFlow framework. Multiple techniques, such as dropout, batchnormalization, tuning hyperparameters using evaluation of the training-validation loss and accuracy between epochs  were implemented to enhance the performance of the model.
+In this project, we construct and implement Convolutional Neural Networks in Python with the TensorFlow framework. Multiple techniques, such as dropout, batch normalization, tuning hyperparameters using evaluation of the training-validation loss and accuracy between epochs  were implemented to enhance the performance of the model.
 
 ## Network Architecture
 
@@ -77,6 +77,7 @@ This project was implemented at Colab Notebooks. It's a Jupyter notebook environ
  - Numpy version 1.16.3
 
 ### The notbook version of this project in Github that can be uploaded directly to colab and easy to run:
+https://github.com/kadygithub/Colab_MNIST_Akram_Tensorflow/blob/master/colab_MNIST_AKRAM.ipynb
 
 
 ### MNIST Dataset
@@ -129,4 +130,4 @@ The CNN network with the unique hyper-parameters has been trained 34 times, with
 ## Acknowledgments
 
 The implementation has been tested on Google colab :https://colab.research.google.com
-The notbook version of this project in Github: 
+The not3book version of this project in Github:https://github.com/kadygithub/Colab_MNIST_Akram_Tensorflow/blob/master/colab_MNIST_AKRAM.ipynb 
