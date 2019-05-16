@@ -41,6 +41,7 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
  
   ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/70.png "Dropout rate :30%")
  #### Randomly 30% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
+  The training loss approaches zero, but after some point ( 25-30 epochs) the validation loss increases. this is the sign of overfitting again.
  
  ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40drop.png "Dropout rate :40%")
  #### Randomly 40% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
@@ -49,8 +50,9 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
  #### Randomly 50% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
  
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40.png "Dropout rate :60%")
- #### Randomly 60% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
- considering the above figures, it seems 40% dropout avoid overfitting while preserve high performance.
+ Randomly 60% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
+
+considering the above figures, it seems 50% dropout avoid overfitting while preserve high performance and stable convergence.
   
 ### Optimal number of iterations (epochs) 
   
