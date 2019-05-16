@@ -34,13 +34,13 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
    ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/decay_lr.png "exponential learning late with Adam optimization"). 
   comparing the first and second techniques for tuning the learning rate reveals the fixed learning rate used with Adam optimizer perform better in terms of training speed.
    
+### Dropout for Regularization
+  After each max-pooling layers and the fully-connected layer dropout technique is added in order to avoid the overfitting of the      model. We run experiment multiple times to determine how much dropout should be considered after each layer. The results shows 40% dropout gives the best results.
   
+### Optimal number of iterations (epochs) 
   
-  
-  - ### Dropout for regularization
-  After each max-pooling layers and the fully-connected layer dropout technique is added in order to reduce the overfitting of the      model. We run experiment multiple times to determine how much dropout should be considered after each layer. The results shows 40% dropout gives the best results.
-  - ### Optimal number of iterations (epochs) 
-  After evaluation of the training-validation loss and accuracy between epochs, we consider epochs=34. 
+
+
   
 
 ## Getting Started
