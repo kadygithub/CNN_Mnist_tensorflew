@@ -23,6 +23,8 @@ Many different CNN architectures for classification of Mnist data with high accu
    By replacing one 5x5 convolution layer with two consecutive 3x3 layers, as well as adding a 5x5 convolution layer with strides=2 instead of max-pooling layer for subsampling. This technique benefits the performance since it is learnable.
   - ### Batch normalization 
  batch normalization is applied after all convolution/fully-connected layers. There is a debate if to apply batch normalization after or before activation function. In this work, I applied after activation.
+ - ### Ensemble model
+ In order to reducing the variance of the network , I train multiple models instead of a single model and to combine the predictions from the top 5 models in terms of performance. This method reduces the variance of predictions and results in predictions that perform better than any single model.
    
 ### Hyperparameters Tuning
    - ### Learning rate
