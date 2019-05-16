@@ -119,7 +119,7 @@ In colab : !python test_Mnist_cnn.py --model-dir model --batch-size 5000 --is-en
 
 The CNN network with the unique hyper-parameters has been trained 34 times, with fixed learning rate of=0.001 and adam optimization, batch size=128, dropout=50%.
 
-- ### With 34 iterations and 50 % dropout, we get accuracy of 99.37% .
+- ### With 34 iterations and 50 % dropout, we get accuracy of 99.15% .
   (the model is saved in "model/single_model".)
  
 - ###  Accuracy for the ensemble models: 99.49% 
