@@ -130,4 +130,4 @@ The CNN network with the unique hyper-parameters has been trained 34 times, with
 ## Acknowledgments
 
 The implementation has been tested on Google colab :https://colab.research.google.com
-The not3book version of this project in Github:https://github.com/kadygithub/Colab_MNIST_Akram_Tensorflow/blob/master/colab_MNIST_AKRAM.ipynb 
+The not3book version of this project in Github: https://github.com/kadygithub/Colab_MNIST_Akram_Tensorflow/blob/master/colab_MNIST_AKRAM.ipynb 
