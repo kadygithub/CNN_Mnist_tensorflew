@@ -37,7 +37,8 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
 ### Dropout for Regularization
   After each max-pooling layers and the fully-connected layer dropout is applied in order to avoid overfitting of the model. We run experiment multiple times to determine how much dropout should be considered after each layer. the following plots show how applying dropout give the model more of an opportunity to learn independent representations.
   ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/NoDropout.png "no dropout")
- #### No dropout was applied. The validation accuracy increased and then decreased after 50-60 epochs, but then started to increase.the performance on the train set is good and continues to improve, whereas performance on the validation set improves to a point and then begins to degrade.This is a sign of overfitting such that the model tried to memorize the data. 
+ #### No dropout was applied. The validation accuracy increased and then decreased after 50-60 epochs, but then started to increase.the performance on the train set is good and almost become stationary distribution, whereas performance on the validation set improved to a point (within circle) and then began to degrade.This is a sign of overfitting such that the model tried to memorize the data. 
+ 
  
   ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/70.png "Dropout rate :30%")
  #### Randomly 30% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
@@ -55,10 +56,9 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
 considering the above figures, it seems 50% dropout avoid overfitting while preserve high performance and stable convergence.
   
 ### Optimal number of iterations (epochs) 
-  
-
-
-  
+The plots above, gives a hint about the value of optimal epoch. Considering dropout rate of 50%, we can see the optimization reaches some local minima and continious to stay around that minima with stationary distribution. Therfore, the optimal value should be around a point that the local optimum was reached. However, number of epoch should be increased with small batch size. I consider number of epochs=34 
+### Batch size
+After several experiments with different batch sizes, it seems 128 be a good choice.
 
 ## Getting Started
 This project was implemented at Colab Notebooks. It's a Jupyter notebook environment that requires no setup to use and runs entirely in the cloud. We can upload the notebook to a GitHub repository or download.py files directly.
