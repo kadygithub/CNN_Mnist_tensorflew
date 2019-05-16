@@ -26,9 +26,7 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
    
 ### Hyperparameters Tuning
    - ### Learning rate
-    First, I use fixed learning rate=0.001 and Adam optimization which has an adaptive learning rate. The adam optimization algorithm in 
-   TensorFlow uses this value for the learning rate (alpha) based on the recomendation of Adam paper:learning_rate=0.001. However, I conducted the following random search to have an good choice of optimizer and learning rate:
-   
+  ####First,I use fixed learning rate=0.001 and Adam optimization which has an adaptive learning rate. The adam optimization algorithm in TensorFlow uses this value for the learning rate (alpha) based on the recomendation of Adam paper:learning_rate=0.001. However, I conducted the following random search to have an good choice of optimizer and learning rate:
    ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/lr.png "fixed learning late with Adam optimization"). considering some values for learning rate, we measure in what time and in how many iterations (epochs), the training model gets to at  least accuracy of 98%.The one with the minimum training time is an efficient learning rate for Adam optimization (learning rate=.001)
     
    second, I  apply exponential decay to the learning rate which can also be used with Adam optimization.
