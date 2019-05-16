@@ -37,7 +37,7 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
 ### Dropout for Regularization
   After each max-pooling layers and the fully-connected layer dropout is applied in order to avoid overfitting of the model. We run experiment multiple times to determine how much dropout should be considered after each layer. the following plots show how applying dropout give the model more of an opportunity to learn independent representations.
   ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/NoDropout.png "no dropout")
- #### No dropout was applied. The validation accuracy increased and then decreased after 50-60 epochs, but then started to increase. This is a sign of overfitting such that the model tried to memorize the data.similar to the accuracy, the validation loss shows the same behavior. 
+ #### No dropout was applied. The validation accuracy increased and then decreased after 50-60 epochs, but then started to increase.the performance on the train set is good and continues to improve, whereas performance on the validation set improves to a point and then begins to degrade.This is a sign of overfitting such that the model tried to memorize the data. 
  
   ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/70.png "Dropout rate :30%")
  #### Randomly 30% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
