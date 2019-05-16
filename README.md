@@ -43,7 +43,10 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
  #### Randomly 30% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
  
  ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40drop.png "Dropout rate :40%")
- #### Randomly 40% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch. 
+ #### Randomly 40% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
+ 
+ ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/50.png "Dropout rate :50%")
+ #### Randomly 50% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
  
 ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/40.png "Dropout rate :60%")
  #### Randomly 60% of the neurons were selected and set their weights to zero for the forward and backward passes i.e. for one epoch.
