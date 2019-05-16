@@ -16,21 +16,24 @@ Many CNN architectures for classification of Mnist data with high accuracy can b
   - second max-pooling layer implemented as a convolutional layer with stride 2: 5x5x64
   - first fully-connected layer : 128 nodes
   - output layer : 10 nodes (number of classes for MNIST data)  
+  
 ## Techniques for improving performance and reliabilty
+
   - ### introducing more non-linearity to the model
    By replacing one 5x5 convolution layer with two consecutive 3x3 layers, Furthermore, adding a 5x5 convolution layer with strides=2 instead of max-pooling layer for subsampling that benefit the performance since it is learnable.
   - ### Batch normalization 
   All convolution/fully-connected layers use batch normalization. a
    
 ### Hyperparameters Tuning
-   - ### Learning rate
-   I first use fixed learning rate=0.001 and Adam optimization which has an adaptive learning rate. The adam optimization algorithm in 
-   TensorFlow uses the following default values for parameters based on the recomendation of Adam paper.
-    learning_rate=0.001, beta1=0.9, beta2=0.999, epsilon=1e-08.
+    - ### Learning rate
+    First, I use fixed learning rate=0.001 and Adam optimization which has an adaptive learning rate. The adam optimization algorithm in 
+   TensorFlow uses this value for the learning rate (alpha) based on the recomendation of Adam paper:learning_rate=0.001. However, I conducted the following random search to have an good choice of optimizer and learning rate:
+   
+   ![Alt text](https://github.com/kadygithub/CNN_Mnist_tensorflew/blob/master/data/lr.png "fixed learning late with Adam optimization"). considering some values for learning rate, we measure in what time and in how many iterations (epochs), the training model gets to at  least accuracy of 98%.The one with the minimum training time is an efficient learning rate for Adam optimization (learning rate=.001)
     
-   - second, I  apply exponential decay to the learning rate which can also be used with Adam optimization.
-   after tandom search, the following papmeters were used for the exponential decay : the base learning rate:.001 and decay rate is set to 0.95.
-  - comparing first and second techniques for tuning the learning rate reveals no significant improvment in the classification accuray.
+   second, I  apply exponential decay to the learning rate which can also be used with Adam optimization.
+   after random search, the following papmeters were used for the exponential decay : the base learning rate:0.001 and decay rate is set to 0.95.
+  comparing the first and second techniques for tuning the learning rate reveals the fixed learning rate used with Adam optimizer perform better in terms of training speed.
    
    how much to update the weight in the optimization algorithm. We can use fixed learning rate, gradually decreasing learning rate, momentum based methods or adaptive learning rates, depending on our choice of optimizer such as SGD, Adam, Adagrad, AdaDelta or RMSProp.
  
